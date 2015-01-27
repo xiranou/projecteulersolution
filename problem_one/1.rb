@@ -1,13 +1,14 @@
-def doMagic(max)
-  i = 3
-  results = []
-  until i >= max
-    if i % 3 == 0 || i % 5 == 0
-      results << i
-    end
-    i += 1
-  end
-  p results.inject(:+)
+def do_magic(max)
+  [*3...max].select do |number|
+    divisible_by?(number, 3, 5)
+  end.inject(:+)
 end
 
-doMagic(1000)
+def divisible_by?(number, *divisors)
+  divisors.each do |divisor|
+    return true if number % divisor == 0
+  end
+  return false
+end
+
+p do_magic(1000)
