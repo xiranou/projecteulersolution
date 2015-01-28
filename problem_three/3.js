@@ -16,8 +16,8 @@ function getPrimeFactors (number) {
 
 function getFactors (number) {
   var factors = [];
-  var midPoint = Math.floor(number/2);
-  for (var i=2; i<midPoint; i++){
+  var square_root = Math.floor(Math.sqrt(number));
+  for (var i=2; i<square_root; i++){
     if (number % i === 0) {
       factors.push(i);
     }
