@@ -19,7 +19,6 @@ function getFactors (number) {
   var midPoint = Math.floor(number/2);
   for (var i=2; i<midPoint; i++){
     if (number % i === 0) {
-      console.log(i);
       factors.push(i);
     }
   }
