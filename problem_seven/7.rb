@@ -1,11 +1,15 @@
 def do_magic(term)
   [].tap do |primes|
-    num = 2
-    until primes.length >= term
-      primes << num if is_prime?(num)
-      num += 1
-    end
+    store_primes(primes, term)
   end.last
+end
+
+def store_primes(primes_array, term)
+  num = 2
+  until primes_array.length >= term
+    primes_array << num if is_prime?(num)
+    num += 1
+  end
 end
 
 def is_prime?(num)
