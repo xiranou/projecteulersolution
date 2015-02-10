@@ -17,5 +17,6 @@ function divisibleBy (number, divisors) {
   var sum = results.reduce(function(a,b){
     return a + b;
   });
-  return console.log(sum);
+  console.log(sum);
+  return sum;
 })(1000);

@@ -1,5 +1,7 @@
 (function doMagic (max) {
-  return console.log(square_of_sums(max) - sum_of_squares(max));
+  var magic = square_of_sums(max) - sum_of_squares(max);
+  console.log(magic);
+  return magic;
 })(100);
 
 function square_of_sums (max) {

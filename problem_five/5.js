@@ -2,7 +2,8 @@
   var number = max;
   while(true){
     if (divisible_by_range(number, max)) {
-      return console.log(number);
+      console.log(number);
+      return number;
     }
     number ++;
   }

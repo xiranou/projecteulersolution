@@ -29,5 +29,6 @@ function isEven (number) {
   var result = evenFibos.reduce(function(i,j){
     return i + j;
   });
-  return console.log(result);
+  console.log(result);
+  return result;
 })(4000000);

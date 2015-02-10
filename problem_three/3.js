@@ -1,6 +1,8 @@
 (function doMagic (number) {
   var primeFactors = getPrimeFactors(number);
-  return console.log(primeFactors[primeFactors.length-1]);
+  var magic = primeFactors[primeFactors.length-1];
+  console.log(magic);
+  return magic;
 })(600851475143);
 
 function getPrimeFactors (number) {
