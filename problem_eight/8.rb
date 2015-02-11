@@ -19,9 +19,18 @@ GRID = %Q*
 84580156166097919133875499200524063689912560717606
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450
-*.gsub!(/\n/,"").split("").map!{|n| n.to_i}
+*
 
 def do_magic(grid, adj_size)
+  grid = digify_grid(grid)
+  find_greatest_product(grid, adj_size)
+end
+
+def digify_grid(grid)
+  grid.gsub(/\n/,"").split("").map { |n| n.to_i }
+end
+
+def find_greatest_product(grid,adj_size)
   result = 0
   [*0...(grid.length-adj_size)].each do |idx|
     product = grid[idx...(idx+adj_size)].inject(:*)
