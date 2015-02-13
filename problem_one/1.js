@@ -9,7 +9,7 @@ function divisibleBy (number, divisors) {
 
 (function doMagic (max) {
   var results =[];
-  for (var i=3; i<=max; i++){
+  for (var i=3; i<max; i++){
     if (divisibleBy(i, [3,5])) {
       results.push(i);
     }
